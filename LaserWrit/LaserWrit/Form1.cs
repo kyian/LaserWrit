@@ -21,7 +21,7 @@ namespace LaserWrit
         private void goButton_Click(object sender, EventArgs e)
         {
             // TODO Create the file based on the input text box.
-            writeFile(inputTextBox.Text);
+            writeFile(inputTextBox.Text.ToUpper());
         }
         private void writeFile(string inText)
         {
@@ -37,14 +37,27 @@ namespace LaserWrit
         // This function takes a text string and converts it to the propper bytes
         // They bytes are stored into a queue for easy processing
         private Queue<byte> textToBin(string text){
-            
-            // Find the straight on perspective
-
-            // modify results for perspective
-
-            // modify restuts for other things.
-            
             Queue<byte> temp = new Queue<byte>();
+            letterLib lib = new letterLib();
+            List<byte> btemp;
+
+            //Read in the text and get place it into the queue
+            foreach (char let in text)
+            {
+                // Find the straight on perspective
+                btemp = lib.diction[let];
+                // modify results for perspective
+                foreach (byte i in btemp)
+                {
+                    temp.Enqueue(i);
+                }
+
+                
+
+            }
+                // modify restuts for other things.
+            
+
 
             return temp;
 
@@ -67,7 +80,8 @@ namespace LaserWrit
                 MessageBox.Show (ex.ToString());
             }
         }
-        
+
+
         
             
     }
