@@ -37,13 +37,54 @@ namespace LaserWrit
         // This function takes a text string and converts it to the propper bytes
         // They bytes are stored into a queue for easy processing
         private Queue<byte> textToBin(string text){
-            Queue<byte> temp = new Queue<byte>();
+
+            // declarations to be filled later
+            Queue<byte> ret = new Queue<byte>();
+            Queue<byte> temp;
             letterLib lib = new letterLib();
-            List<byte> btemp;
+            List<point> btemp;
+            int col = 0; // keeps track of what column the letter will be in
+
+
 
             //Read in the text and get place it into the queue
             foreach (char let in text)
             {
+                
+
+                // get the point list for the character
+                btemp = lib.diction[let];
+
+                foreach (point tempChar in btemp)
+                {
+
+                    // alter the character for position
+                    tempChar.x += lib.xMaxPerLet * col;
+
+                    // change the altered point to bytes
+                    temp = lib.genBytes(tempChar);
+
+                    // stick the bytes into the queue.
+                    foreach (byte by in temp)
+                    {
+                        ret.Enqueue(by);
+                    }
+
+                    // add a deliminator
+                    ret.Enqueue((byte)0);
+                }
+
+
+                // update the col position
+                col++;
+
+
+
+
+                /*
+
+
+                 * old style code
                 // Find the straight on perspective
                 btemp = lib.diction[let];
                 // modify results for perspective
@@ -52,14 +93,12 @@ namespace LaserWrit
                     temp.Enqueue(i);
                 }
 
-                
+                */
 
             }
-                // modify restuts for other things.
-            
 
-
-            return temp;
+            //  return the queue
+            return ret;
 
         }
 

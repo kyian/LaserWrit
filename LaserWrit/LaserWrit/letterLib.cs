@@ -1,24 +1,49 @@
 ﻿using System;
 using System.Collections.Generic;
-
 /// <summary>
 /// Library for turning letters into Galvo coords
 /// </summary>
 
 namespace LaserWrit
 {
+    public class point
+    {
+        public int x;
+        public int y;
+
+        public point(){
+            x = 0;
+            y = 0;
+        }
+
+        public point(int xin, int yin)
+        {
+            x = xin;
+            y = yin;
+        }
+
+
+    }
     public class letterLib
     {
-        public Dictionary<char, List<byte>> diction;
+        public Dictionary<char, List<point>> diction;
+        public int xMaxPerLet = 20;
         public letterLib()
         {
             //
             // 
             //
-            diction = new Dictionary<char,List<byte> >();
+            diction = new Dictionary<char,List<point> >();
             char let = 'A';
 
 
+            // A
+            List<point> A = new List<point>();
+            A.Add(new point(3, 7));
+
+            diction.Add(let, A);
+
+/*
             // A
             List<byte> A = new List<byte>();
             A.Add(0);
@@ -45,255 +70,28 @@ namespace LaserWrit
             A.Add(2);
             A.Add(2);
 
-            A.Add(255);
-            diction.Add(let, A);
-
-            // D
-            let = (char)((int)let + 1);
-            A = new List<byte>();
-            A.Add(2);
-            A.Add(2);
-            A.Add(2);
-
-            A.Add(255);
-            diction.Add(let, A);
-
-            // E
-            let = (char)((int)let + 1);
-            A = new List<byte>();
-            A.Add(2);
-            A.Add(2);
-            A.Add(2);
-
-            A.Add(255);
-            diction.Add(let, A);
-
-            // F
-            let = (char)((int)let + 1);
-            A = new List<byte>();
-            A.Add(2);
-            A.Add(2);
-            A.Add(2);
-
-            A.Add(255);
-            diction.Add(let, A);
-
-            // G
-            let = (char)((int)let + 1);
-            A = new List<byte>();
-            A.Add(2);
-            A.Add(2);
-            A.Add(2);
-
-            A.Add(255);
-            diction.Add(let, A);
-
-            // H
-            let = (char)((int)let + 1);
-            A = new List<byte>();
-            A.Add(2);
-            A.Add(2);
-            A.Add(2);
-
-            A.Add(255);
-            diction.Add(let, A);
-
-            //I
-
-            let = (char)((int)let + 1);
-            A = new List<byte>();
-            A.Add(2);
-            A.Add(2);
-            A.Add(2);
-
-            A.Add(255);
-            diction.Add(let, A);
-
-            // J
-            let = (char)((int)let + 1);
-            A = new List<byte>();
-            A.Add(2);
-            A.Add(2);
-            A.Add(2);
-
-            A.Add(255);
-            diction.Add(let, A);
-
-            // K
-            let = (char)((int)let + 1);
-            A = new List<byte>();
-            A.Add(2);
-            A.Add(2);
-            A.Add(2);
-
-            A.Add(255);
-            diction.Add(let, A);
-
-            // L
-            let = (char)((int)let + 1);
-            A = new List<byte>();
-            A.Add(2);
-            A.Add(2);
-            A.Add(2);
-
-            A.Add(255);
-            diction.Add(let, A);
-
-            // M
-            let = (char)((int)let + 1);
-            A = new List<byte>();
-            A.Add(2);
-            A.Add(2);
-            A.Add(2);
-
-            A.Add(255);
-            diction.Add(let, A);
-
-            // N
-            let = (char)((int)let + 1);
-            A = new List<byte>();
-            A.Add(2);
-            A.Add(2);
-            A.Add(2);
-
-            A.Add(255);
-            diction.Add(let, A);
-
-            // O
-            let = (char)((int)let + 1);
-            A = new List<byte>();
-            A.Add(2);
-            A.Add(2);
-            A.Add(2);
-
-            A.Add(255);
-            diction.Add(let, A);
-
-            // P
-            let = (char)((int)let + 1);
-            A = new List<byte>();
-            A.Add(2);
-            A.Add(2);
-            A.Add(2);
-
-            A.Add(255);
-            diction.Add(let, A);
-
-            // Q
-            let = (char)((int)let + 1);
-            A = new List<byte>();
-            A.Add(2);
-            A.Add(2);
-            A.Add(2);
-
-            A.Add(255);
-            diction.Add(let, A);
-
-            // R
-            let = (char)((int)let + 1);
-            A = new List<byte>();
-            A.Add(2);
-            A.Add(2);
-            A.Add(2);
-
-            A.Add(255);
-            diction.Add(let, A);
-
-            // S
-            let = (char)((int)let + 1);
-            A = new List<byte>();
-            A.Add(2);
-            A.Add(2);
-            A.Add(2);
-
-            A.Add(255);
-            diction.Add(let, A);
-
-            // T
-            let = (char)((int)let + 1);
-            A = new List<byte>();
-            A.Add(2);
-            A.Add(2);
-            A.Add(2);
-
-            A.Add(255);
-            diction.Add(let, A);
-
-            // U
-            let = (char)((int)let + 1);
-            A = new List<byte>();
-            A.Add(2);
-            A.Add(2);
-            A.Add(2);
-
-            A.Add(255);
-            diction.Add(let, A);
-
-            // V
-            let = (char)((int)let + 1);
-            A = new List<byte>();
-            A.Add(2);
-            A.Add(2);
-            A.Add(2);
-
-            A.Add(255);
-            diction.Add(let, A);
-
-            // W
-            let = (char)((int)let + 1);
-            A = new List<byte>();
-            A.Add(2);
-            A.Add(2);
-            A.Add(2);
-
-            A.Add(255);
-            diction.Add(let, A);
-
-            // X
-            let = (char)((int)let + 1);
-            A = new List<byte>();
-            A.Add(2);
-            A.Add(2);
-            A.Add(2);
-
-            A.Add(255);
-            diction.Add(let, A);
-
-            // Y
-            let = (char)((int)let + 1);
-            A = new List<byte>();
-            A.Add(2);
-            A.Add(2);
-            A.Add(2);
-
-            A.Add(255);
-            diction.Add(let, A);
-
-            // Z
-            let = (char)((int)let + 1);
-            A = new List<byte>();
-            A.Add(2);
-            A.Add(2);
-            A.Add(2);
-
-            A.Add(255);
-            diction.Add(let, A);
-
-            // [space]
-            A = new List<byte>();
-            A.Add(254);
-            A.Add(254);
-            A.Add(254);
-
-            A.Add(255);
-            diction.Add(' ', A);
+ */
+           
         }
 
-        private List<byte> genBytes(int posx, int posy)
+        public Queue<byte> genBytes(point pin)
         {
-            // Todo
-            return new List<byte>();
+            Queue<byte> temp = new Queue<byte>();
 
+
+            //256 x16
+            int a, b, c;
+            a = pin.x / 16;
+            b = pin.x%256 * 16;
+            b += pin.y / 256;
+            c = pin.y%256;
+
+
+            temp.Enqueue((byte)a);
+            temp.Enqueue((byte)b);
+            temp.Enqueue((byte)c);
+
+            return temp;
         }
     }
 }
