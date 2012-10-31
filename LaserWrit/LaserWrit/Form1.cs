@@ -92,7 +92,8 @@ namespace LaserWrit
             FileStream writeStream ;
             try
             {
-                writeStream = new FileStream("C:\\Temp\\laser.dat", FileMode.Create);
+                MessageBox.Show("The data file is located at:\n"+ Environment.GetFolderPath(Environment.SpecialFolder.Desktop));
+                writeStream = new FileStream(Environment.GetFolderPath(Environment.SpecialFolder.Desktop)+"\\laser.dat", FileMode.Create);
                 BinaryWriter writeBinay = new BinaryWriter(writeStream);
                 while(byteQueue.Count > 0){
                     writeBinay.Write(byteQueue.Dequeue());
