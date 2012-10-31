@@ -70,30 +70,15 @@ namespace LaserWrit
                         ret.Enqueue(by);
                     }
 
-                    // add a deliminator
-                    ret.Enqueue((byte)0);
+                    
                 }
-
+                // add a deliminator for the end of each letter
+                ret.Enqueue((byte)255);
 
                 // update the col position
                 col++;
 
 
-
-
-                /*
-
-
-                 * old style code
-                // Find the straight on perspective
-                btemp = lib.diction[let];
-                // modify results for perspective
-                foreach (byte i in btemp)
-                {
-                    temp.Enqueue(i);
-                }
-
-                */
 
             }
 

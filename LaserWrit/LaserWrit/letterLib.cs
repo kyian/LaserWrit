@@ -40,37 +40,272 @@ namespace LaserWrit
             // A
             List<point> A = new List<point>();
             A.Add(new point(3, 7));
+            A.Add(new point(3, 7));
+            A.Add(new point(3, 7));
 
-            diction.Add(let, A);
 
-/*
-            // A
-            List<byte> A = new List<byte>();
-            A.Add(0);
-            A.Add(0);
-            A.Add(0);
-
-            A.Add(255);
             diction.Add(let, A);
 
             // B
             let = (char)((int)let + 1);
-            A = new List<byte>();
-            A.Add(1);
-            A.Add(1);
-            A.Add(1);
+            A = new List<point>();
+            A.Add(new point(3, 7));
+            A.Add(new point(3, 7));
+            A.Add(new point(3, 7));
 
-            A.Add(255);
+
             diction.Add(let, A);
 
             // C
             let = (char)((int)let + 1);
-            A = new List<byte>();
-            A.Add(2);
-            A.Add(2);
-            A.Add(2);
+            A = new List<point>();
+            A.Add(new point(3, 7));
+            A.Add(new point(3, 7));
+            A.Add(new point(3, 7));
 
- */
+
+            diction.Add(let, A);
+
+            // d 
+            let = (char)((int)let + 1);
+            A = new List<point>();
+            A.Add(new point(3, 7));
+            A.Add(new point(3, 7));
+            A.Add(new point(3, 7));
+
+
+            diction.Add(let, A);
+
+            // e
+            let = (char)((int)let + 1);
+            A = new List<point>();
+            A.Add(new point(3, 7));
+            A.Add(new point(3, 7));
+            A.Add(new point(3, 7));
+
+
+            diction.Add(let, A);
+
+            // f
+            let = (char)((int)let + 1);
+            A = new List<point>();
+            A.Add(new point(3, 7));
+            A.Add(new point(3, 7));
+            A.Add(new point(3, 7));
+
+
+            diction.Add(let, A);
+
+            // g
+            let = (char)((int)let + 1);
+            A = new List<point>();
+            A.Add(new point(3, 7));
+            A.Add(new point(3, 7));
+            A.Add(new point(3, 7));
+
+
+            diction.Add(let, A);
+
+            // h
+            let = (char)((int)let + 1);
+            A = new List<point>();
+            A.Add(new point(3, 7));
+            A.Add(new point(3, 7));
+            A.Add(new point(3, 7));
+
+
+            diction.Add(let, A);
+
+            // i
+            let = (char)((int)let + 1);
+            A = new List<point>();
+            A.Add(new point(3, 7));
+            A.Add(new point(3, 7));
+            A.Add(new point(3, 7));
+
+
+            diction.Add(let, A);
+
+            // j
+            let = (char)((int)let + 1);
+            A = new List<point>();
+            A.Add(new point(3, 7));
+            A.Add(new point(3, 7));
+            A.Add(new point(3, 7));
+
+
+            diction.Add(let, A);
+
+            // k
+            let = (char)((int)let + 1);
+            A = new List<point>();
+            A.Add(new point(3, 7));
+            A.Add(new point(3, 7));
+            A.Add(new point(3, 7));
+
+
+            diction.Add(let, A);
+
+            // l
+            let = (char)((int)let + 1);
+            A = new List<point>();
+            A.Add(new point(3, 7));
+            A.Add(new point(3, 7));
+            A.Add(new point(3, 7));
+
+
+            diction.Add(let, A);
+
+            // m
+            let = (char)((int)let + 1);
+            A = new List<point>();
+            A.Add(new point(3, 7));
+            A.Add(new point(3, 7));
+            A.Add(new point(3, 7));
+
+
+            diction.Add(let, A);
+
+            // n
+            let = (char)((int)let + 1);
+            A = new List<point>();
+            A.Add(new point(3, 7));
+            A.Add(new point(3, 7));
+            A.Add(new point(3, 7));
+
+
+            diction.Add(let, A);
+
+            // o
+            let = (char)((int)let + 1);
+            A = new List<point>();
+            A.Add(new point(3, 7));
+            A.Add(new point(3, 7));
+            A.Add(new point(3, 7));
+
+
+            diction.Add(let, A);
+
+            // p
+            let = (char)((int)let + 1);
+            A = new List<point>();
+            A.Add(new point(3, 7));
+            A.Add(new point(3, 7));
+            A.Add(new point(3, 7));
+
+
+            diction.Add(let, A);
+
+            // q
+            let = (char)((int)let + 1);
+            A = new List<point>();
+            A.Add(new point(3, 7));
+            A.Add(new point(3, 7));
+            A.Add(new point(3, 7));
+
+
+            diction.Add(let, A);
+
+            // r
+            let = (char)((int)let + 1);
+            A = new List<point>();
+            A.Add(new point(3, 7));
+            A.Add(new point(3, 7));
+            A.Add(new point(3, 7));
+
+
+            diction.Add(let, A);
+
+            // s
+            let = (char)((int)let + 1);
+            A = new List<point>();
+            A.Add(new point(3, 7));
+            A.Add(new point(3, 7));
+            A.Add(new point(3, 7));
+
+
+            diction.Add(let, A);
+
+            // t
+            let = (char)((int)let + 1);
+            A = new List<point>();
+            A.Add(new point(3, 7));
+            A.Add(new point(3, 7));
+            A.Add(new point(3, 7));
+
+
+            diction.Add(let, A);
+
+            // u
+            let = (char)((int)let + 1);
+            A = new List<point>();
+            A.Add(new point(3, 7));
+            A.Add(new point(3, 7));
+            A.Add(new point(3, 7));
+
+
+            diction.Add(let, A);
+
+            // v
+            let = (char)((int)let + 1);
+            A = new List<point>();
+            A.Add(new point(3, 7));
+            A.Add(new point(3, 7));
+            A.Add(new point(3, 7));
+
+
+            diction.Add(let, A);
+
+            // w
+            let = (char)((int)let + 1);
+            A = new List<point>();
+            A.Add(new point(3, 7));
+            A.Add(new point(3, 7));
+            A.Add(new point(3, 7));
+
+
+            diction.Add(let, A);
+
+            // x
+            let = (char)((int)let + 1);
+            A = new List<point>();
+            A.Add(new point(3, 7));
+            A.Add(new point(3, 7));
+            A.Add(new point(3, 7));
+
+
+            diction.Add(let, A);
+
+            // y
+            let = (char)((int)let + 1);
+            A = new List<point>();
+            A.Add(new point(3, 7));
+            A.Add(new point(3, 7));
+            A.Add(new point(3, 7));
+
+
+            diction.Add(let, A);
+
+            // z
+            let = (char)((int)let + 1);
+            A = new List<point>();
+            A.Add(new point(3, 7));
+            A.Add(new point(3, 7));
+            A.Add(new point(3, 7));
+
+
+            diction.Add(let, A);
+
+            // [space]
+            let = (char)((int)let + 1);
+            A = new List<point>();
+            A.Add(new point(3, 7));
+            A.Add(new point(3, 7));
+            A.Add(new point(3, 7));
+
+
+            diction.Add(let, A);
+
            
         }
 
