@@ -44,33 +44,37 @@ namespace LaserWrit
             letterLib lib = new letterLib();
             List<point> btemp;
             int col = 0; // keeps track of what column the letter will be in
-
-
+            int writTimes = 5; // This is how many times the letter will be written before moving on
 
             //Read in the text and get place it into the queue
             foreach (char let in text)
             {
-                
-
-                // get the point list for the character
-                btemp = lib.diction[let];
-
-                foreach (point tempChar in btemp)
+                int rewrite = 0;
+                while (rewrite < writTimes)
                 {
 
-                    // alter the character for position
-                    tempChar.x += lib.xMaxPerLet * col;
+                    // get the point list for the character
+                    btemp = lib.diction[let];
 
-                    // change the altered point to bytes
-                    temp = lib.genBytes(tempChar);
-
-                    // stick the bytes into the queue.
-                    foreach (byte by in temp)
+                    foreach (point tempChar in btemp)
                     {
-                        ret.Enqueue(by);
-                    }
 
-                    
+                        // alter the character for position
+                        tempChar.x += lib.xMaxPerLet * col;
+
+                        // change the altered point to bytes
+                        temp = lib.genBytes(tempChar);
+
+                        // stick the bytes into the queue.
+                        foreach (byte by in temp)
+                        {
+                            ret.Enqueue(by);
+                        }
+
+
+                    }
+ 
+                    rewrite++;
                 }
                 // add a deliminator for the end of each letter
                 ret.Enqueue((byte)255);

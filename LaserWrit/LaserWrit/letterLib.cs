@@ -297,11 +297,9 @@ namespace LaserWrit
             diction.Add(let, A);
 
             // [space]
-            let = (char)((int)let + 1);
+            let = ' ';
             A = new List<point>();
-            A.Add(new point(3, 7));
-            A.Add(new point(3, 7));
-            A.Add(new point(3, 7));
+
 
 
             diction.Add(let, A);
