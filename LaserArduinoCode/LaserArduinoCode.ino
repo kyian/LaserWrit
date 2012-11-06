@@ -55,12 +55,30 @@ boolean getNextTen(){
 }
 
 boolean dispLayLoop(){
+  int i = 0;
+  int count = 0; // For ease of pulling data
+  // while for each character
+  while(i < 10){
+    int j = 0;
+    // TODO turn on laser
+    // while for each point in the char
+    //  only one increas in j fore each xy (2 mem words)
+    while(j<charSize[i]){
+      dacx.setVoltage(mem[count] , false);
+      count++;
+      dacy.setVoltage(mem[count] , false);
+      count++;
+      j++;
+    }
+    // ToDo turn laser off
+  }
+  
 }
  
 void loop(){
   // Place the next 10 characters into the array
   
   // Display the characters
-
+  displayLoop();
     
 }
