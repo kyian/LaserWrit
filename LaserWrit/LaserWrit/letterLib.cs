@@ -39,9 +39,10 @@ namespace LaserWrit
 
             // A
             List<point> A = new List<point>();
-            A.Add(new point(3, 7));
-            A.Add(new point(3, 7));
-            A.Add(new point(3, 7));
+            A.Add(new point(0, 0));
+            A.Add(new point(20, 60));
+            A.Add(new point(0, 0));
+            A.Add(new point(20, 60));
 
 
             diction.Add(let, A);
@@ -313,16 +314,16 @@ namespace LaserWrit
 
 
             //256 x16
-            int a, b, c;
-            a = pin.x / 16;
-            b = pin.x%256 * 16;
-            b += pin.y / 256;
-            c = pin.y%256;
-
+            int a, b, c, d;
+            a = pin.x / 256;
+            b = pin.x % 256;
+            c = pin.y/256;
+            d = pin.y % 256;
 
             temp.Enqueue((byte)a);
             temp.Enqueue((byte)b);
             temp.Enqueue((byte)c);
+            temp.Enqueue((byte)d);
 
             return temp;
         }

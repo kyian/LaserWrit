@@ -26,7 +26,13 @@ namespace LaserWrit
         private void writeFile(string inText)
         {
 
-            
+            // Pre processing on text string
+            // all lines must be 10 characters long
+            while (inText.Length < 10)
+            {
+                inText += " ";
+            }
+
             //Convert to binary
             Queue<byte> byteQueue = textToBin(inText);
             //Write binary to a file
@@ -44,7 +50,7 @@ namespace LaserWrit
             letterLib lib = new letterLib();
             List<point> btemp;
             int col = 0; // keeps track of what column the letter will be in
-            int writTimes = 5; // This is how many times the letter will be written before moving on
+            int writTimes = 1; // This is how many times the letter will be written before moving on
 
             //Read in the text and get place it into the queue
             foreach (char let in text)
@@ -77,12 +83,14 @@ namespace LaserWrit
                     rewrite++;
                 }
                 // add a deliminator for the end of each letter
+                // del is 4 bytes only the first has to be 0xF
+                ret.Enqueue((byte)255);
+                ret.Enqueue((byte)255);
+                ret.Enqueue((byte)255);
                 ret.Enqueue((byte)255);
 
                 // update the col position
                 col++;
-
-
 
             }
 
