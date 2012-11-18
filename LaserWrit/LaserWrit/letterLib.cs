@@ -27,7 +27,7 @@ namespace LaserWrit
     public class letterLib
     {
         public Dictionary<char, List<point>> diction;
-        public int xMaxPerLet = 20;
+        public int xMaxPerLet = 409;
         public letterLib()
         {
             //
@@ -39,10 +39,11 @@ namespace LaserWrit
 
             // A
             List<point> A = new List<point>();
-            A.Add(new point(0, 0));
-            A.Add(new point(20, 60));
-            A.Add(new point(0, 0));
-            A.Add(new point(20, 60));
+            A.Add(new point(000, 2000));//1
+            A.Add(new point(200, 2800));//2
+            A.Add(new point(400, 2000));//3
+            A.Add(new point(300, 2400));//4
+            A.Add(new point(100, 2400));//5
 
 
             diction.Add(let, A);
@@ -50,9 +51,14 @@ namespace LaserWrit
             // B
             let = (char)((int)let + 1);
             A = new List<point>();
-            A.Add(new point(3, 7));
-            A.Add(new point(3, 7));
-            A.Add(new point(3, 7));
+            A.Add(new point(0, 2000));//1
+            A.Add(new point(0, 2800));//2
+            A.Add(new point(400, 2800));//3
+            A.Add(new point(400, 2000));//4
+            A.Add(new point(0, 2000));//5
+            A.Add(new point(0, 2400));//6
+            A.Add(new point(400, 2400));//7
+            A.Add(new point(0, 2400));//8
 
 
             diction.Add(let, A);
